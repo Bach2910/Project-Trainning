@@ -13,7 +13,9 @@
 # Giao diện các trang 
 1. Login:![image](https://github.com/user-attachments/assets/90608c2c-b9e6-4013-adca-b0e289f662db)
 
+
 2. Dashboard: ![image](https://github.com/user-attachments/assets/f457a8f6-c46c-4212-bf1b-96a2bb3bd2f8)
     url:http://127.0.0.1:8000/admin
+   
 3.Food Page: ![image](https://github.com/user-attachments/assets/37110e7e-7ca5-4569-be3f-dccd79296650)
     url:http://127.0.0.1:8000/store
