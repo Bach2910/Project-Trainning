@@ -25,11 +25,9 @@
 1. Login Page:
      ![image](https://github.com/user-attachments/assets/cf740dc2-b402-4c74-bd94-1804df7f78a7)
 
-2. Register Page:
-     ![image](https://github.com/user-attachments/assets/7848fad3-b642-4e25-966d-914eb7b523d2)
+2. Register Page: ![image](https://github.com/user-attachments/assets/7848fad3-b642-4e25-966d-914eb7b523d2)
 
-3.Forgot-password Page: 
-    ![image](https://github.com/user-attachments/assets/ba835d65-4628-4b1c-8e5d-cd1f1cd2f5ed)
+3.Forgot-password Page:  ![image](https://github.com/user-attachments/assets/ba835d65-4628-4b1c-8e5d-cd1f1cd2f5ed)
 
 
 4. Dashboard Page:
