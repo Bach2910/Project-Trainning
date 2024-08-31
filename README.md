@@ -10,6 +10,8 @@
 
 5.Javascript
 
+6.Bootstrap
+
 # Chức năng
 1.Người truy cập và người dùng có thể xem nội dung các trang store và new title.
 
