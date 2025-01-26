@@ -65,7 +65,9 @@ public function reset(Request $request)
             : back()->withErrors(['email' => [__($status)]]);
     }
 ```
-![image](https://github.com/user-attachments/assets/d8ea6e97-a4de-4544-bba9-d7c495c7f35a)
++ Verify the parameters in the request are valid
++ The Password::reset method resets the user's password
++ The user will be redirected to the login page and a success status message will be displayed
 
 ### Forgot Password
 
@@ -83,7 +85,9 @@ public function sendResetLinkEmail(Request $request)
             : back()->withErrors(['email' => __($status)]);
     }
 ```
-![image](https://github.com/user-attachments/assets/ba835d65-4628-4b1c-8e5d-cd1f1cd2f5ed)
++ Authenticate the request received from the user
++ The Password::sendResetLink method is called to send a password reset link to the email the user provided. It will send an email containing a unique link so the user can change his password
++ If the password reset link was sent successfully, the user will be returned to the current page and displayed a success message.
 
 ## Page interface
 1. Login Page:
