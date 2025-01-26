@@ -1,5 +1,5 @@
-## Project-Trainning
-### Technology is used
+# Project-Trainning
+## Technology is used
 1.Php
 
 2.Mysql
@@ -14,21 +14,21 @@
 
 ## How to run 
 
-# Install laravel
+### Install laravel
 ```sh
 composer global require laravel/installer
 
 laravel new myproject
 ```
-# Install laragon
+### Install laragon
 We can search for Laragon online and download it
 
-# Create data tables and sample data
+### Create data tables and sample data
 ```sh
 php artisan migrate
 php artisan db:seed 
 ```
-### Function
+## Function
 1.Visitors and users can view the content of store pages and new titles.
 
 2.The site has ordering functions and, if necessary, it is possible to leave a review for the site in the commnet page.
@@ -41,7 +41,7 @@ php artisan db:seed
 
 ## The API I used
 
-# Change password
+### Change password
 ```sh
 public function reset(Request $request)
     {
@@ -67,7 +67,7 @@ public function reset(Request $request)
 ```
 ![image](https://github.com/user-attachments/assets/d8ea6e97-a4de-4544-bba9-d7c495c7f35a)
 
-## Forgot Password
+### Forgot Password
 
 ```sh
 public function sendResetLinkEmail(Request $request)
@@ -85,7 +85,7 @@ public function sendResetLinkEmail(Request $request)
 ```
 ![image](https://github.com/user-attachments/assets/ba835d65-4628-4b1c-8e5d-cd1f1cd2f5ed)
 
-### Page interface
+## Page interface
 1. Login Page:
      ![image](https://github.com/user-attachments/assets/cf740dc2-b402-4c74-bd94-1804df7f78a7)
 
