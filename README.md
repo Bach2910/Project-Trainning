@@ -1,5 +1,5 @@
-# Project-Trainning
-# Công nghệ được sử dụng
+## Project-Trainning
+### Technology is used
 1.Php
 
 2.Mysql
@@ -12,18 +12,62 @@
 
 6.Bootstrap
 
-# Chức năng
-1.Người truy cập và người dùng có thể xem nội dung các trang store và new title.
+## How to run 
 
-2.Trang web có các chức năng đặt hàng và nếu cần thì có thể để lại đánh giá cho trang trong trang  commnet.
+# Install laravel
+```sh
+composer global require laravel/installer
 
-3.Khi Order và Contact sẽ gửi file .txt tự động tải về máy
+laravel new myproject
+```
+# Install laragon
+We can search for Laragon online and download it
 
-4.Trang dashboard có các chức năng đăng ký, đăng nhập và đổi mật khẩu, quên mật khẩu 
+# Create data tables and sample data
+```sh
+php artisan migrate
+php artisan db:seed 
+```
+### Function
+1.Visitors and users can view the content of store pages and new titles.
 
-5.Họ có thể quản lý các thông tin, nội dung trong các bảng food và new trong trang dashboard.
+2.The site has ordering functions and, if necessary, it is possible to leave a review for the site in the commnet page.
 
-# Giao diện các trang 
+3.When Order and Contact will send a .txt file that will automatically download to your device
+
+4.The dashboard page has the functions of registering, logging in, changing password, and forgetting password
+
+5.We can manage information including the functions of adding, editing, deleting, and searching for content in the food and new tables in the dashboard..
+
+## The API I used
+
+# Change password
+```sh
+public function reset(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|confirmed|min:8',
+            'token' => 'required'
+        ]);
+
+        $status = Password::reset(
+            $request->only('email', 'password', 'password_confirmation', 'token'),
+            function ($user) use ($request) {
+                $user->password = Hash::make($request->password);
+                $user->save();
+                Auth::login($user);
+            }
+        );
+
+        return $status === Password::PASSWORD_RESET
+            ? redirect()->route('login')->with('status', __($status))
+            : back()->withErrors(['email' => [__($status)]]);
+    }
+```
+![image](https://github.com/user-attachments/assets/d8ea6e97-a4de-4544-bba9-d7c495c7f35a)
+
+### Page interface
 1. Login Page:
      ![image](https://github.com/user-attachments/assets/cf740dc2-b402-4c74-bd94-1804df7f78a7)
 
