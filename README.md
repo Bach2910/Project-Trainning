@@ -67,6 +67,24 @@ public function reset(Request $request)
 ```
 ![image](https://github.com/user-attachments/assets/d8ea6e97-a4de-4544-bba9-d7c495c7f35a)
 
+## Forgot Password
+
+```sh
+public function sendResetLinkEmail(Request $request)
+    {
+        $request->validate(['email' => 'required|email']);
+
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
+
+        return $status === Password::RESET_LINK_SENT
+            ? back()->with(['status' => __($status)])
+            : back()->withErrors(['email' => __($status)]);
+    }
+```
+![image](https://github.com/user-attachments/assets/ba835d65-4628-4b1c-8e5d-cd1f1cd2f5ed)
+
 ### Page interface
 1. Login Page:
      ![image](https://github.com/user-attachments/assets/cf740dc2-b402-4c74-bd94-1804df7f78a7)
